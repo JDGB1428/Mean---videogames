@@ -1,7 +1,7 @@
 import  mongoose  from "mongoose";
 
 const commentSchema = new mongoose.Schema({
-    description:{
+    commentary:{
         type:String,
         required:true
     },
@@ -10,11 +10,11 @@ const commentSchema = new mongoose.Schema({
         ref: 'User',
         required:true
     },
-    // game:{
-    //     type: mongoose.Schema.Types.ObjectId, 
-    //     ref: 'Game',
-    //     required:true 
-    //  }
+    game:{
+        type: mongoose.Schema.Types.ObjectId, 
+        ref: 'Game',
+        required:true
+    }
 },{
     timestamps:true
 });

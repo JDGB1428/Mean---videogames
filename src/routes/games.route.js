@@ -16,5 +16,5 @@ router.get('/games/:id', authRequired, getGame);
 router.post('/games', authRequired, createGames);
 router.delete('/games/:id', authRequired, deleteGames);
 router.put('/games/:id', authRequired, updateGames);
-
+//router.post('games/:id/comment')
 export default router

@@ -7,5 +7,5 @@ import {
 
 const router = Router();
 
-router.post('/games/:id', authRequired, createComments);
+router.post('/games/:id/comment/', authRequired, createComments);
 export default router

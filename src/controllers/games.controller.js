@@ -25,7 +25,7 @@ export const createGames = async(req,res) => {
 };
 
 export const getGame = async(req,res) => {
-    const game = await Games.findById()
+    const game = await Games.findById(req.params.id)
     if(!game) return res.status(404).json({message: 'Game not found'})
     res.json(game);
 };
