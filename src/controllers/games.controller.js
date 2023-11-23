@@ -8,11 +8,11 @@ export const getGames = async(req,res) => {
 };
 
 export const createGames = async(req,res) => {
-    const {title, description,view, category, publication_date} = req.body;
+    const {title, description,image, category, publication_date} = req.body;
     const newGame = new Games({
         title,
         description,
-        view,
+        image,
         category,
         publication_date,
         user:req.user.id
