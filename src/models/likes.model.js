@@ -11,4 +11,4 @@ const likeSchema = new mongoose.Schema({
     }
 });
 
-export default mongoose.model('Likes', commentSchema);
+export default mongoose.model('Likes', likeSchema);

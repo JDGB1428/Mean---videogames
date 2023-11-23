@@ -15,6 +15,6 @@ router.get('/games', authRequired, getGames);
 router.get('/games/:id', authRequired, getGame);
 router.post('/games', authRequired, createGames);
 router.delete('/games/:id', authRequired, deleteGames);
-router.put('/tasks/:id', authRequired, updateGames);
+router.put('/games/:id', authRequired, updateGames);
 
 export default router

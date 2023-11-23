@@ -15,10 +15,7 @@ const userSchema = new mongoose.Schema({
     password:{
         type:String,
         required:true
-    },
-    comment:[{type: mongoose.Schema.Types.ObjectId, ref: 'Comment'}],
-    likes:[{type: mongoose.Schema.Types.ObjectId, ref: 'Likes'}],
-    
+    },   
 },{
     timestamps:true
 }

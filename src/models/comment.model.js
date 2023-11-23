@@ -1,4 +1,4 @@
-import { mongoose } from "mongoose";
+import  mongoose  from "mongoose";
 
 const commentSchema = new mongoose.Schema({
     description:{
@@ -10,10 +10,11 @@ const commentSchema = new mongoose.Schema({
         ref: 'User',
         required:true
     },
-    like:{
-        type:Number,
-        required:false,
-    },
+    // game:{
+    //     type: mongoose.Schema.Types.ObjectId, 
+    //     ref: 'Game',
+    //     required:true 
+    //  }
 },{
     timestamps:true
 });
