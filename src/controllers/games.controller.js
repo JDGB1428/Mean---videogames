@@ -9,9 +9,6 @@ export const getGames = async(req,res) => {
 
 export const createGames = async(req,res) => {
     const {title, description,view, category, publication_date} = req.body;
-
-    console.log(req.comment);
-
     const newGame = new Games({
         title,
         description,

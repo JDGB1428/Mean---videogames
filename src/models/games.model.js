@@ -13,6 +13,9 @@ const gameSchema = new mongoose.Schema({
         type:Number,
         required:true
     },
+    image:{
+        type:[String]
+    },
     category:{
         type:String,
         required:true
