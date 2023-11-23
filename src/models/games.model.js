@@ -5,21 +5,13 @@ const gameSchema = new mongoose.Schema({
         type:String,
         required:true,
     },
-    price: {
-        type:Number,
-        required:true,
-    },
     description: {
         type:String,
         required:true,
     },
-    platform: {
-        type:String,
-        required:true,
-    },
-    publication_date:{
-        type:Date,
-        default:Date.now
+    view:{
+        type:Number,
+        required:true
     },
     category:{
         type:String,
