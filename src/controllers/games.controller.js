@@ -11,7 +11,6 @@ export const createGames = async(req,res) => {
         title,
         description,
         image,
-        commentary,
         category,
     });
     const SaveGame = await newGame.save();
