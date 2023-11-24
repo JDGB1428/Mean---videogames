@@ -14,17 +14,9 @@ const gameSchema = new mongoose.Schema({
         type:[String]
     },
     category:{
-        type:[String],
+        type:String,
         required:true,
-    },
-    commentary:{
-        type:[String]
-    },
-    // user:{
-    //     type: mongoose.Schema.Types.ObjectId,
-    //     ref: 'User',
-    //     required:true
-    //  }
+    }
 }, {
     timestamps:true
 });
