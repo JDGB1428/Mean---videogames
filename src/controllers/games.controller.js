@@ -6,7 +6,7 @@ export const getGames = async(req,res) => {
 };
 
 export const createGames = async(req,res) => {
-    const {title, description,image,commentary, category} = req.body;
+    const {title, description,image, category} = req.body;
     const newGame = new Games({
         title,
         description,
