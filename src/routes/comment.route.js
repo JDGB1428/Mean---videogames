@@ -7,7 +7,6 @@ import {
 
 
 const router = Router();
-
-router.get('/games/comments', getComment);
-router.post('/games/comment', createComment);
+router.get('/games/:id/comments', getComment);
+router.post('/games/:id/comment', createComment);
 export default router
