@@ -1,21 +1,20 @@
 import Games from "../models/games.model.js";
 
 export const getGames = async(req,res) => {
-    const games = await Games.find({
-        user:req.user.id
-    }).populate('user');
+    const games = await Games.find();
     res.json(games);
 };
 
 export const createGames = async(req,res) => {
-    const {title, description,image, category, publication_date} = req.body;
+    const {title, description,image,commentary, category, publication_date} = req.body;
     const newGame = new Games({
         title,
         description,
         image,
+        commentary,
         category,
         publication_date,
-        user:req.user.id
+        // user:req.user.id
     });
     const SaveGame = await newGame.save();
     res.json(SaveGame);

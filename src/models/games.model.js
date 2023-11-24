@@ -14,14 +14,17 @@ const gameSchema = new mongoose.Schema({
         type:[String]
     },
     category:{
-        type:String,
-        required:true
+        type:[String],
+        required:true,
     },
-    user:{
-        type: mongoose.Schema.Types.ObjectId,
-        ref: 'User',
-        required:true
-    }
+    commentary:{
+        type:[String]
+    },
+    // user:{
+    //     type: mongoose.Schema.Types.ObjectId,
+    //     ref: 'User',
+    //     required:true
+    //  }
 }, {
     timestamps:true
 });

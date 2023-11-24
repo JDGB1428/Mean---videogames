@@ -5,7 +5,6 @@ import cors from 'cors'
 
 import authRoutes from "./routes/auth.routes.js";
 import gamesRoutes from "./routes/games.route.js";
-import commentRoutes from "./routes/comment.route.js";
 
 const app = express();
 
@@ -16,6 +15,5 @@ app.use(cookieParser());
 
 app.use("/api",authRoutes);
 app.use("/api",gamesRoutes);
-app.use("/api",commentRoutes);
 
 export default app;

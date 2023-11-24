@@ -12,10 +12,10 @@ import {
 
 const router = Router();
 
-router.get('/games', authRequired, getGames);
-router.get('/games/:id', authRequired, getGame);
-router.post('/games', authRequired, createGames);
-router.delete('/games/:id', authRequired, deleteGames);
-router.put('/games/:id', authRequired, updateGames);
-router.get('/games/category', authRequired, getcategory)
+router.get('/games', getGames);
+router.get('/games/:id', getGame);
+router.post('/games', createGames);
+router.delete('/games/:id', deleteGames);
+router.put('/games/:id', updateGames);
+router.get('/games/category', getcategory)
 export default router
