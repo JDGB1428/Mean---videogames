@@ -7,10 +7,9 @@ export const getComment = async(req,res)=>{
 
 export const createComment = async(req,res) => {
     const {commentary} = req.body;
+    console.log(req.game)
     const newComment = new Comment({
         commentary,
-        // game:req.games.id,
-        // user:req.user.id
     });
     const SaveComment = await newComment.save();
     res.json(SaveComment);

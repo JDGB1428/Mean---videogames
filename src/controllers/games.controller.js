@@ -6,15 +6,13 @@ export const getGames = async(req,res) => {
 };
 
 export const createGames = async(req,res) => {
-    const {title, description,image,commentary, category, publication_date} = req.body;
+    const {title, description,image,commentary, category} = req.body;
     const newGame = new Games({
         title,
         description,
         image,
         commentary,
         category,
-        publication_date,
-        // user:req.user.id
     });
     const SaveGame = await newGame.save();
     res.json(SaveGame);
@@ -45,4 +43,17 @@ export const deleteGames = async(req,res) => {
     const game = await Games.findByIdAndDelete(req.params.id)
     if(!game) return res.status(404).json({message:" Game not found"})
     res.json(game)
+};
+
+export const incrementView = async(req,res) => {
+    const { id } = req.params;
+    console.log(req.params);
+    const game = await Games.findById(id);
+    if (!game) {
+      return res.status(404).send('Game not found');
+    }
+    game.view++;
+    await game.save();
+
+    res.json({ message: 'View count updated successfully' });
 };

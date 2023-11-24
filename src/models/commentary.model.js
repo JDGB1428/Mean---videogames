@@ -9,10 +9,10 @@ const commentSchema = new mongoose.Schema({
     //     type: mongoose.Schema.Types.ObjectId,
     //     ref: 'User'
     // },
-    game:{
-        type: mongoose.Schema.Types.ObjectId,
-        ref: 'Game'
-    }
+    // game:{
+    //     type: mongoose.Schema.Types.ObjectId,
+    //     ref: 'Game'
+    // }
 }, {
     timestamps:true
 });

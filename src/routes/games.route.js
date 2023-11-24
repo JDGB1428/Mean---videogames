@@ -6,7 +6,8 @@ import {
     createGames,
     updateGames,
     deleteGames,
-    getcategory
+    getcategory,
+    incrementView
 } from "../controllers/games.controller.js";
 
 
@@ -18,4 +19,5 @@ router.post('/games', createGames);
 router.delete('/games/:id', deleteGames);
 router.put('/games/:id', updateGames);
 router.get('/games/category', getcategory)
+router.get('/games/view/:id', incrementView);
 export default router
